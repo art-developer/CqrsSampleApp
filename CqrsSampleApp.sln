@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Presenters", "Sam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Console", "SampleApp.Console\SampleApp.Console.csproj", "{D499F47C-D026-428B-983D-3AEB718F36D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E196D644-6DC2-47C6-B198-4E527D48B70E}"
+	ProjectSection(SolutionItems) = preProject
+		data access layer architecture.dgml = data access layer architecture.dgml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

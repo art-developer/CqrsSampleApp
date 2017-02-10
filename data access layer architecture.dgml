@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph Layout="ForceDirected" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="DataAccess" Bounds="-6.49713774633963,-166.648296813965,62.3433333333333,25.96" Label="Art.Cqrs" UseManualLocation="True" />
+    <Node Id="EF" Bounds="131.457160839159,-85.5166018882245,50,25.96" UseManualLocation="True" />
+    <Node Id="EF.Firebird" Bounds="120.117633620365,-17.7821810490955,74.9466666666667,25.96" UseManualLocation="True" />
+    <Node Id="EntryPoint" Category="Comment" Bounds="-159.284591540854,-356.706675235235,78.04,25.96" Label="Entry point" UseManualLocation="True" />
+    <Node Id="Raduga.Console" Bounds="-346.889236857096,-229.559348651123,138.44,25.96" Label="SampleApp.Presenters" UseManualLocation="True" />
+    <Node Id="Raduga.Console1" Category="Category1" Bounds="-339.539814272736,-297.496978209683,126.056666666667,25.96" Label="SampleApp.Console" UseManualLocation="True" />
+    <Node Id="Raduga.DataAccess.EF" Bounds="-33.3437999044022,-89.700312524405,121.793333333333,25.96" Label="SampleApp.Cqrs.EF" UseManualLocation="True" />
+    <Node Id="Raduga.Domain" Bounds="-430.026081067787,-31.2678307896391,125.083333333333,25.96" Label="SampleApp.Domain" UseManualLocation="True" />
+    <Node Id="Raduga.IQueries" Bounds="-173.369682055691,-232.186520432846,127.256666666667,25.96" Label="SampleApp.IQueries" UseManualLocation="True" />
+    <Node Id="Raduga.Queries" Bounds="-173.560471079673,-169.535793762207,124.063333333333,25.96" Label="SampleApp.Queries" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="EF.Firebird" Target="EF" Bounds="156.825062842365,-50.5578624960726,0.548631959532599,32.7756814469771" />
+    <Link Source="EntryPoint" Target="Raduga.Console1" Bounds="-233.84291680664,-330.746669311523,79.3257494571598,30.0604576222593" />
+    <Link Source="Raduga.Console" Target="Raduga.Domain" Bounds="-357.891836661055,-203.599348651123,74.3433720029205,164.133284379182" />
+    <Link Source="Raduga.Console" Target="Raduga.IQueries" Bounds="-208.449236857096,-218.070293347644,26.0806559960475,0.408022540167138" />
+    <Link Source="Raduga.Console1" Target="Raduga.Console" Bounds="-277.294687987017,-271.536978209683,0.562008988316336,32.97893612402" />
+    <Link Source="Raduga.DataAccess.EF" Target="DataAccess" Bounds="25.4964829898434,-131.694586735156,1.57084806525419,41.9942765239743" />
+    <Link Source="Raduga.DataAccess.EF" Target="EF" Bounds="88.4495307413737,-74.7438525013255,34.0123665981973,1.10390285500233" />
+    <Link Source="Raduga.DataAccess.EF" Target="Raduga.Domain" Bounds="-296.039617653917,-67.7126964599689,262.695815061957,38.8570108293525" />
+    <Link Source="Raduga.Queries" Target="DataAccess" Bounds="-49.4971381123861,-155.240728681748,34.0020223006397,0.720839445324543" />
+    <Link Source="Raduga.Queries" Target="Raduga.Domain" Bounds="-335.537928978024,-143.575793762207,199.981115530372,108.030378854343" />
+    <Link Source="Raduga.Queries" Target="Raduga.IQueries" Bounds="-111.158478992763,-197.230181148545,0.790134498046768,27.6943873863383" />
+  </Links>
+  <Categories>
+    <Category Id="Category1" Label="Category 1" Background="#FFE51400" IsTag="True" />
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+  </Categories>
+  <Properties>
+    <Property Id="Background" Label="Background" Description="The background color" DataType="System.Windows.Media.Brush" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsTag" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Category 1" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Category1')" />
+      <Setter Property="Background" Value="#FFE51400" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>
