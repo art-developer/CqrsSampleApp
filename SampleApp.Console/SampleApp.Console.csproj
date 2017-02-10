@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C0CEE5B9-FE0B-44FE-B8AD-F90D85F20D6B}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{D499F47C-D026-428B-983D-3AEB718F36D6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Art.Cqrs</RootNamespace>
-    <AssemblyName>Art.Cqrs</AssemblyName>
+    <RootNamespace>SampleApp.Console</RootNamespace>
+    <AssemblyName>SampleApp.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,14 +44,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmptyCriterion.cs" />
-    <Compile Include="IConnectionStringProvider.cs" />
-    <Compile Include="ICriterion.cs" />
-    <Compile Include="IDbContext.cs" />
-    <Compile Include="IFindAllQuery.cs" />
-    <Compile Include="IQuery.cs" />
-    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="AppSettingsConnectionStringProvider.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Art.Cqrs.EF\Art.Cqrs.EF.csproj">
+      <Project>{0C79FDA9-6C84-4BAB-A825-EC7264267400}</Project>
+      <Name>Art.Cqrs.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Art.Cqrs\Art.Cqrs.csproj">
+      <Project>{C0CEE5B9-FE0B-44FE-B8AD-F90D85F20D6B}</Project>
+      <Name>Art.Cqrs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleApp.IQueries\SampleApp.IQueries.csproj">
+      <Project>{1d745249-d326-47f8-bed5-93446b5f65dd}</Project>
+      <Name>SampleApp.IQueries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleApp.Presenters\SampleApp.Presenters.csproj">
+      <Project>{707C9738-EA6E-4AA4-8AFE-018F1A761FB4}</Project>
+      <Name>SampleApp.Presenters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleApp.Queries\SampleApp.Queries.csproj">
+      <Project>{8645B731-60B4-4E94-AF14-7C8717E9F6D8}</Project>
+      <Name>SampleApp.Queries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
