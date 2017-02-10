@@ -8,5 +8,7 @@ namespace Art.Cqrs
 {
     public class Class1
     {
+
+
     }
 }
