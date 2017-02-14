@@ -5,8 +5,6 @@ namespace SampleApp.Console
 {
     class AppSettingsConnectionStringProvider:IConnectionStringProvider
     {
-        public string ConnectionString {
-            get { return ConfigurationManager.ConnectionStrings["Default"].ConnectionString; }
-        }
+        public string ConnectionString => ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
     }
 }

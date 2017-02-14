@@ -4,7 +4,7 @@ using SampleApp.Domain;
 
 namespace SampleApp.IQueries
 {
-    public interface IGetOrdersQuery:IFindAllQuery<IList<Order>>
+    public interface IGetOrdersQuery:IFindAllQuery<IReadOnlyCollection<Order>>
     {
         
     }

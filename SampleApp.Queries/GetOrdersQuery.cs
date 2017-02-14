@@ -14,7 +14,7 @@ namespace SampleApp.Queries
             this.unitOfWork = unitOfWork;
         }
 
-        public IList<Order> Execute()
+        public IReadOnlyCollection<Order> Execute()
         {
             using (var dbContext = unitOfWork.CreateContext())
             {

@@ -4,15 +4,15 @@ namespace SampleApp.Presenters
 {
     public class MainPresenter
     {
-        private readonly IGetOrdersQuery getOrdresQuery;
-        public MainPresenter(IGetOrdersQuery getOrdresQuery)
+        private readonly IGetOrdersQuery getOrdersQuery;
+        public MainPresenter(IGetOrdersQuery getOrdersQuery)
         {
-            this.getOrdresQuery = getOrdresQuery;
+            this.getOrdersQuery = getOrdersQuery;
         }
 
         public void Run()
         {
-            var drugs= getOrdresQuery.Execute();
+            var orders= getOrdersQuery.Execute();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Art.Cqrs.EF;
+using SampleApp.Cqrs.EF;
 using SampleApp.Presenters;
 using SampleApp.Queries;
 
@@ -15,7 +16,7 @@ namespace SampleApp.Console
         {
             try
             {
-                var query = new GetOrdersQuery(new EFUnitOfWork(new AppSettingsConnectionStringProvider()));
+                var query = new GetOrdersQuery(new SampleAppUnitOfWork(new AppSettingsConnectionStringProvider()));
                 var mainPresenter = new MainPresenter(query);
                 mainPresenter.Run();
             }

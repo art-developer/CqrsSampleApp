@@ -2,7 +2,7 @@
 {
     public class EFUnitOfWork:IUnitOfWork
     {
-        private readonly IConnectionStringProvider connectionStringProvider;
+        protected readonly IConnectionStringProvider connectionStringProvider;
         private IDbContext dbContext;
 
         public EFUnitOfWork(IConnectionStringProvider connectionStringProvider)
@@ -10,7 +10,7 @@
             this.connectionStringProvider = connectionStringProvider;
         }
 
-        public IDbContext CreateContext()
+        public virtual IDbContext CreateContext()
         {
             dbContext = new EFDbContext(connectionStringProvider.ConnectionString);
             return dbContext;
@@ -19,7 +19,7 @@
 
         public void Dispose()
         {
-            dbContext.Dispose();
+            dbContext?.Dispose();
         }
     }
 }

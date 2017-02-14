@@ -9,6 +9,5 @@ namespace Art.Cqrs
 
         TEntity Add<TEntity>(TEntity entity) where TEntity:class;
         int SaveChanges();
-        void Dispose();
     }
 }
