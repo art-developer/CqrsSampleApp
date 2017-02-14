@@ -2,7 +2,7 @@
 
 namespace Art.Cqrs
 {
-    public interface IUnitOfWork:IDisposable
+    public interface IUnitOfWork
     {
         IDbContext CreateContext();
     }

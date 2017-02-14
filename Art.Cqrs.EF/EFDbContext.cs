@@ -7,7 +7,6 @@ namespace Art.Cqrs.EF
     {
         public EFDbContext(string connectionString) : base(connectionString)
         {
-            
         }
 
         IQueryable<T> IDbContext.Set<T>()

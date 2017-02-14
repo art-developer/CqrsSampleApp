@@ -14,12 +14,6 @@
         {
             dbContext = new EFDbContext(connectionStringProvider.ConnectionString);
             return dbContext;
-            
-        }
-
-        public void Dispose()
-        {
-            dbContext?.Dispose();
         }
     }
 }
