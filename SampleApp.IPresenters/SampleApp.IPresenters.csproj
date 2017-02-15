@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{707C9738-EA6E-4AA4-8AFE-018F1A761FB4}</ProjectGuid>
+    <ProjectGuid>{AACFDF77-837E-4750-862F-7ED135603946}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SampleApp.Presenters</RootNamespace>
-    <AssemblyName>SampleApp.Presenters</AssemblyName>
+    <RootNamespace>SampleApp.IPresenters</RootNamespace>
+    <AssemblyName>SampleApp.IPresenters</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,26 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainPresenter.cs" />
+    <Compile Include="IMainPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Art.Cqrs\Art.Cqrs.csproj">
-      <Project>{c0cee5b9-fe0b-44fe-b8ad-f90d85f20d6b}</Project>
-      <Name>Art.Cqrs</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SampleApp.Domain\SampleApp.Domain.csproj">
-      <Project>{5b73e651-2b48-4093-a320-2178acc9de10}</Project>
-      <Name>SampleApp.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SampleApp.IPresenters\SampleApp.IPresenters.csproj">
-      <Project>{aacfdf77-837e-4750-862f-7ed135603946}</Project>
-      <Name>SampleApp.IPresenters</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SampleApp.IQueries\SampleApp.IQueries.csproj">
-      <Project>{1D745249-D326-47F8-BED5-93446B5F65DD}</Project>
-      <Name>SampleApp.IQueries</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

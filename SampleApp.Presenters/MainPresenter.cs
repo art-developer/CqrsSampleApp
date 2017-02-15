@@ -1,8 +1,9 @@
-﻿using SampleApp.IQueries;
+﻿using SampleApp.IPresenters;
+using SampleApp.IQueries;
 
 namespace SampleApp.Presenters
 {
-    public class MainPresenter
+    public class MainPresenter:IMainPresenter
     {
         private readonly IGetOrdersQuery getOrdersQuery;
         public MainPresenter(IGetOrdersQuery getOrdersQuery)
