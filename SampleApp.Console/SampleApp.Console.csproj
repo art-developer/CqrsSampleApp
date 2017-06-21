@@ -81,9 +81,21 @@
       <Project>{C0CEE5B9-FE0B-44FE-B8AD-F90D85F20D6B}</Project>
       <Name>Art.Cqrs</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Art.DI.LightInject\Art.DI.LightInject.csproj">
+      <Project>{26a0b2fb-d343-4623-9a32-64ed98a550f0}</Project>
+      <Name>Art.DI.LightInject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Art.DI\Art.DI.csproj">
+      <Project>{504a2996-f9dc-47fd-bea1-3c9a57d8d62f}</Project>
+      <Name>Art.DI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SampleApp.Cqrs.EF\SampleApp.Cqrs.EF.csproj">
       <Project>{AB3F749E-C779-42C8-A4E4-477C7DDC59ED}</Project>
       <Name>SampleApp.Cqrs.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleApp.IPresenters\SampleApp.IPresenters.csproj">
+      <Project>{aacfdf77-837e-4750-862f-7ed135603946}</Project>
+      <Name>SampleApp.IPresenters</Name>
     </ProjectReference>
     <ProjectReference Include="..\SampleApp.IQueries\SampleApp.IQueries.csproj">
       <Project>{1d745249-d326-47f8-bed5-93446b5f65dd}</Project>

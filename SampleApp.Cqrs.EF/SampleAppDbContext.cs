@@ -20,7 +20,6 @@ namespace SampleApp.Cqrs.EF
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Order>().HasKey(t => t.OrderId);
-            
             base.OnModelCreating(modelBuilder);
         }
 
