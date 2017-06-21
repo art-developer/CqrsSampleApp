@@ -5,7 +5,7 @@ namespace Art.Cqrs
 {
     public interface IDbContext:IDisposable
     {
-        IQueryable<TEntity> Set<TEntity>() where TEntity : class;
+        IDbQuery<TEntity> Set<TEntity>() where TEntity : class;
 
         TEntity Add<TEntity>(TEntity entity) where TEntity:class;
         int SaveChanges();

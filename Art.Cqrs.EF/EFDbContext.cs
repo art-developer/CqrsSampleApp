@@ -9,9 +9,9 @@ namespace Art.Cqrs.EF
         {
         }
 
-        IQueryable<T> IDbContext.Set<T>()
+        IDbQuery<T> IDbContext.Set<T>()
         {
-            return base.Set<T>();
+            return new EFDbQuery<T>(base.Set<T>());
         }
 
         public TEntity Add<TEntity>(TEntity entity) where TEntity:class

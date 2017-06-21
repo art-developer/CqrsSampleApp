@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IConnectionStringProvider.cs" />
     <Compile Include="IDbContext.cs" />
+    <Compile Include="IDbQuery.cs" />
     <Compile Include="IFindAllQuery.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="IUnitOfWork.cs" />
